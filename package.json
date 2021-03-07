@@ -9,7 +9,8 @@
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
-    "test": "mocha -r ts-node/register tests/**/*.spec.ts"
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
+    "cover": "node \"node_modules/nyc/bin/nyc.js\" --reporter=lcov npm run test"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "@types/node": "^12.12.21",
     "chai": "^4.3.3",
     "mocha": "^8.3.1",
+    "nyc": "^15.1.0",
     "ts-node": "^9.1.1",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",

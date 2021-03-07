@@ -13,7 +13,7 @@ npm install percent-normalizer
 ```
 
 [![CI CD Status](https://github.com/haimkastner/percent-normalizer/workflows/percent-normalizer/badge.svg?branch=master)](https://github.com/haimkastner/percent-normalizer/actions)
-
+[![Coverage Status](https://coveralls.io/repos/github/haimkastner/percent-normalizer/badge.svg?branch=master)](https://coveralls.io/github/haimkastner/percent-normalizer?branch=master)
 # How to convert
 
 ```typescript
