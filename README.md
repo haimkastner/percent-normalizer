@@ -54,7 +54,7 @@ percentNormalizerOption = {
     };
 
 let permille = normalizeToPercents(percentNormalizerOption);
-console.log(permille) // 500
+console.log(permille) // 500‰
 
 // From Permille
 percentNormalizerOption = {
