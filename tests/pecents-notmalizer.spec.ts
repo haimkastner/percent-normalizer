@@ -245,7 +245,7 @@ describe('percent Normalizer - TESTS', () => {
 
     describe('Fraction test', () => {
 
-        it(`Get exact fraction`, () => {
+        it(`Get from percents exact fraction`, () => {
             const percentNormalizerOption : PercentNormalizerOption = {
                 topRangeBorder : 100,
                 bottomRangeBorder : 0,
@@ -254,11 +254,22 @@ describe('percent Normalizer - TESTS', () => {
                 percentsBottomRangeBorder: 0,
             }
 
-            const percents = normalizeFromPercents(percentNormalizerOption);
+            const value = normalizeFromPercents(percentNormalizerOption);
+            expect(value).equal(12.5);
+        });
+
+        it(`Get percents exact fraction`, () => {
+            const percentNormalizerOption : PercentNormalizerOption = {
+                topRangeBorder : 200,
+                bottomRangeBorder : 0,
+                value : 25,
+            }
+
+            const percents = normalizeToPercents(percentNormalizerOption);
             expect(percents).equal(12.5);
         });
 
-        it(`Floor fraction`, () => {
+        it(`Floor from percents fraction`, () => {
             const percentNormalizerOption : PercentNormalizerOption = {
                 topRangeBorder : 100,
                 bottomRangeBorder : 0,
@@ -266,9 +277,21 @@ describe('percent Normalizer - TESTS', () => {
                 percentsTopRangeBorder: 200,
                 percentsBottomRangeBorder: 0,
                 returnsInteger : true
-            }
+            };
 
-            const percents = normalizeFromPercents(percentNormalizerOption);
+            const value = normalizeFromPercents(percentNormalizerOption);
+            expect(value).equal(12);
+        });
+
+        it(`Floor percents fraction`, () => {
+            const percentNormalizerOption : PercentNormalizerOption = {
+                topRangeBorder : 200,
+                bottomRangeBorder : 0,
+                value : 25,
+                returnsInteger : true,
+            };
+
+            const percents = normalizeToPercents(percentNormalizerOption);
             expect(percents).equal(12);
         });
     });
