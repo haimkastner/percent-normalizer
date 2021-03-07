@@ -12,8 +12,9 @@ npm install percent-normalizer
 
 ```
 
-# How to convert
+[![CI CD Status](https://github.com/haimkastner/percent-normalizer/workflows/percent-normalizer/badge.svg?branch=master)](https://github.com/haimkastner/percent-normalizer/actions)
 
+# How to convert
 
 ```typescript
 import { 

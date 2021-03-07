@@ -1,6 +1,6 @@
 {
   "name": "percent-normalizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small converter library to normalize from/to percents",
   "main": "dist/index.js",
   "files": [
